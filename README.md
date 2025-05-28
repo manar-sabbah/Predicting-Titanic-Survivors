@@ -24,13 +24,22 @@ Dropped the original 'SibSp' and 'Parch' features.
 
 4-Cabin Feature: Extracted the deck letter from the 'Cabin' feature (e.g., 'C' from 'C85'), as passengers with cabin assignments were more likely to survive. Dropped the original 'Cabin'.
 
-Dropped Unused Features: Removed 'PassengerId' and 'Name' as they are not useful for prediction.
+5-Dropped Unused Features: Removed 'PassengerId' 
+
+6- extract 'Title' feature from 'Name' , it helps getting better results , Dropped the original 'Name'.
+
 
 
 
 **Model Building**
 I Try multiple classification models  like Logistic Regression, Random Forest , XGBoost 
 
+**Grid SearchCV**
+To improve model performance, I applied GridSearchCV for both Random Forest and XGBoost. 
+
+**Voting Classifier**
+To further improve prediction accuracy, I implemented a Voting Classifier combining:
+Logistic Regression and Tuned Random Forest
 
 **Evaluation**
 I evluate using accuracy, precision, recall, and confusion matrix
